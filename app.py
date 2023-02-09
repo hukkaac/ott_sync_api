@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    pagetitle ="Welcome to OTT release Online Data Sync Services ."
+    return render_template("home.html",pagetitle = pagetitle)
 
 @app.route("/sync_data")
 def sync_data():
@@ -14,4 +15,4 @@ def sync_data():
         print(f"Error from sync_data : {error}")
 
 if __name__ == '__main__':
-    app.run( )
+    app.run(debug=True )
