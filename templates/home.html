@@ -4,15 +4,19 @@
     <title>Welcome to OTT release Online Data Sync Services. </title>
 </head>
 <body>
-    <ul id="navigation">
-    {% for item in navigation %}
-        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-    {% endfor %}
-    </ul>
-
     <h1>{{pagetitle}}</h1>
-    {{ a_variable }}
 
-    {# a comment #}
+
+    <form action="Load-Data" >
+        <label for="url">Website Url</label>
+        <input type = "url" name="url" value="">
+        <br><br>
+
+        <label for="text">Shot Url</label>
+        <input type = "text" name="code" value="">
+        <br>
+        <input type = "submit" value="Submit">
+
+    </form>
 </body>
 </html>
